@@ -1,0 +1,43 @@
+input:focus {
+  border: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  flex: 0.5;
+  min-width: 70px;
+  background-color: white;
+  color: gray;
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header__left > input {
+  border: none;
+  width: 100%;
+}
+.header__left > input:focus {
+  outline: none;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 30px;
+}
+
+.header__right > h5 {
+  margin-left: 10px;
+}
