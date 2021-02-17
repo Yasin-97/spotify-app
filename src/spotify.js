@@ -8,7 +8,7 @@
 // by login btn the user gets sent to authEndPoint, after logging in, he is
 // redirected to redirectUri(main page)
 export const authEndpoint = "https://accounts.spotify.com/authorize"
-const redirectUri = "http://spotify-app-yasin.netlify.app/"
+const redirectUri = "https://spotify-app-yasin.netlify.app"
 const clientId = "2c297407321f4b66bcd9e79ac2c3eb31"
 
 
