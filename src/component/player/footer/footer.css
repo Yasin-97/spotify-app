@@ -78,3 +78,7 @@ footer__green:hover {
 .MuiSvgIcon-root {
   cursor: pointer;
 }
+
+.MuiGrid-spacing-xs-2 > .MuiGrid-item {
+     padding: 0px !important; 
+}
