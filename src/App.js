@@ -2,6 +2,7 @@ import React,{useState, useEffect} from "react"
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Login from "./component/login/Login"
 import Player from "./component/player/Player"
+import BigDevice from "./component/player/bigDevice/BigDevice"
 import { getTokenFromUrl } from "./spotify"
 import {useDataProviderValue} from "./context"
 import SpotifyWebApi from "spotify-web-api-js";
@@ -9,10 +10,10 @@ import SpotifyWebApi from "spotify-web-api-js";
 // this object is responsible for any interaction between this app and spotify api
 const spotify = new SpotifyWebApi();
 function App() {
-  // const [token, setToken] = useState(null);
-
+  const [windowWidth,setWindowWidth]=useState(window.innerWidth)
+  const deviceTest= windowWidth<690? (<BigDevice />):(<Player spotify={spotify}/>)
+                                        
   const [{ user,token}, dispatch] = useDataProviderValue()
-  
 
   useEffect(() => {
     const hash = getTokenFromUrl()
@@ -48,7 +49,7 @@ dispatch({type:"SET_TOKEN",token:_token})
 },[])
   return (
     <div className="App">
-      {token ? (<Player spotify={spotify}/>):(<Login />)}
+     {token ? (deviceTest):(<Login />)}
      
     </div>
   );
