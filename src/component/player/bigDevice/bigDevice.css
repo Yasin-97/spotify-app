@@ -1,0 +1,23 @@
+.big__device{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    color:gray;
+    letter-spacing: .5px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.big__device img{
+width: 400px;
+height: 200px;
+object-fit: contain;
+margin-bottom: 10vh;
+}
+
+h3{
+    padding: 15px;
+}
