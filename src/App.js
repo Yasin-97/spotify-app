@@ -11,8 +11,7 @@ import SpotifyWebApi from "spotify-web-api-js";
 const spotify = new SpotifyWebApi();
 function App() {
   const [windowWidth,setWindowWidth]=useState(window.innerWidth)
-//   const deviceTest= windowWidth<690? (<BigDevice />):(<Player spotify={spotify}/>)
-  const deviceTest= windowWidth<690? (<h1>hello from not logging</h1>):(<h1>hello from spotify</h1>)
+  const deviceTest= windowWidth<690? (<BigDevice />):(<Player spotify={spotify}/>)
                                         
   const [{ user,token}, dispatch] = useDataProviderValue()
 
@@ -50,7 +49,8 @@ dispatch({type:"SET_TOKEN",token:_token})
 },[])
   return (
     <div className="App">
-     {token ? (deviceTest):(<Login />)}
+//      {token ? (deviceTest):(<Login />)}
+     {token ? (<h1>updated now</h1>):(<Login />)}
      
     </div>
   );
