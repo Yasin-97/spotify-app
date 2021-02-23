@@ -1,6 +1,6 @@
 import React from "react";
 import './bigDevice.css'
-import spotifyLogo from '../../../img/asit.png'
+import spotifyLogo from '../../../img/bigLogo.png'
 function BigDevice() {
   return (
     <div class="big__device">
