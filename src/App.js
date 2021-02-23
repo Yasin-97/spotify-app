@@ -49,9 +49,7 @@ dispatch({type:"SET_TOKEN",token:_token})
 },[])
   return (
     <div className="App">
-//      {token ? (deviceTest):(<Login />)}
-     {token ? (<h1>updated now</h1>):(<Login />)}
-     
+      {token ? (deviceTest):(<Login />)}
     </div>
   );
 }
