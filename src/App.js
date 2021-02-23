@@ -12,7 +12,7 @@ const spotify = new SpotifyWebApi();
 function App() {
    const [windowWidth,setWindowWidth]=useState(window.innerWidth)
    const [windowHeight,setWindowHeight]=useState(window.innerHeight)
-   const deviceTest= windowWidth<690 && windowHeight<450 ? (<BigDevice />):(<Player spotify={spotify}/>)
+   const deviceTest= windowWidth<690 || windowHeight<450 ? (<BigDevice />):(<Player spotify={spotify}/>)
                                         
   const [{ user,token}, dispatch] = useDataProviderValue()
 
